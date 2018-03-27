@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QLKhoHang", "QLKhoHang\QLKhoHang.csproj", "{041CD43E-BAC2-4707-A386-BC367A69F4E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{B464DA8B-16ED-46A6-8F16-08A96EA1728E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{AE446606-DE7F-4538-81A6-B22D33153E38}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{041CD43E-BAC2-4707-A386-BC367A69F4E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041CD43E-BAC2-4707-A386-BC367A69F4E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{041CD43E-BAC2-4707-A386-BC367A69F4E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041CD43E-BAC2-4707-A386-BC367A69F4E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B464DA8B-16ED-46A6-8F16-08A96EA1728E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B464DA8B-16ED-46A6-8F16-08A96EA1728E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B464DA8B-16ED-46A6-8F16-08A96EA1728E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B464DA8B-16ED-46A6-8F16-08A96EA1728E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE446606-DE7F-4538-81A6-B22D33153E38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE446606-DE7F-4538-81A6-B22D33153E38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE446606-DE7F-4538-81A6-B22D33153E38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE446606-DE7F-4538-81A6-B22D33153E38}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
