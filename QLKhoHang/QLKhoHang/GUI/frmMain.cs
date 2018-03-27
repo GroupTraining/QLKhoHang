@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QLKhoHang.GUI;
 
 namespace QLKhoHang
 {
@@ -15,6 +16,12 @@ namespace QLKhoHang
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void danhSáchSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDsSanPham dssp = new frmDsSanPham();
+            dssp.Show();
         }
     }
 }
