@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\frmDsKh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDsKh.Designer.cs">
+      <DependentUpon>frmDsKh.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmDsSanPham.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +74,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmDsKh.resx">
+      <DependentUpon>frmDsKh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDsSanPham.resx">
       <DependentUpon>frmDsSanPham.cs</DependentUpon>
     </EmbeddedResource>
