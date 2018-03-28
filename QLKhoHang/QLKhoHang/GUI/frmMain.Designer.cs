@@ -160,18 +160,21 @@
             this.danhSáchToolStripMenuItem.Name = "danhSáchToolStripMenuItem";
             this.danhSáchToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.danhSáchToolStripMenuItem.Text = "Danh sách hóa đơn nhập";
+            this.danhSáchToolStripMenuItem.Click += new System.EventHandler(this.danhSáchToolStripMenuItem_Click);
             // 
             // danhSáchHóaĐơnXuấtToolStripMenuItem
             // 
             this.danhSáchHóaĐơnXuấtToolStripMenuItem.Name = "danhSáchHóaĐơnXuấtToolStripMenuItem";
             this.danhSáchHóaĐơnXuấtToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.danhSáchHóaĐơnXuấtToolStripMenuItem.Text = "Danh sách hóa đơn xuất";
+            this.danhSáchHóaĐơnXuấtToolStripMenuItem.Click += new System.EventHandler(this.danhSáchHóaĐơnXuấtToolStripMenuItem_Click);
             // 
             // danhSáchHàngTồnKhoToolStripMenuItem
             // 
             this.danhSáchHàngTồnKhoToolStripMenuItem.Name = "danhSáchHàngTồnKhoToolStripMenuItem";
             this.danhSáchHàngTồnKhoToolStripMenuItem.Size = new System.Drawing.Size(206, 22);
             this.danhSáchHàngTồnKhoToolStripMenuItem.Text = "Danh sách hàng tồn kho";
+            this.danhSáchHàngTồnKhoToolStripMenuItem.Click += new System.EventHandler(this.danhSáchHàngTồnKhoToolStripMenuItem_Click);
             // 
             // Form1
             // 
