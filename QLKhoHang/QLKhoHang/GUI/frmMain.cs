@@ -23,5 +23,11 @@ namespace QLKhoHang
             frmDsSanPham dssp = new frmDsSanPham();
             dssp.Show();
         }
+
+        private void danhSáchKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDsKh dskh = new frmDsKh();
+            dskh.Show();
+        }
     }
 }

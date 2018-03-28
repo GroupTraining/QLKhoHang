@@ -14,8 +14,26 @@ namespace BUS
         public object get_DsSP()
         {
             var dssp = from sp in data.SanPhams
-                       select sp;
+                       select new
+                       {
+                           sp.MaSP,sp.TenSP, sp.MaLoaiSP, sp.SoLuong, sp.Gia, sp.GhiChu, sp.Ngay
+                       };
             return dssp;
+        }
+        public object get_DsDT(string loaidoitac)
+        {
+            var dsdt = from dt in data.DoiTacs
+                       where dt.KieuDoiTac == loaidoitac
+                       select new
+                       {
+                           dt.MaDoiTac,
+                           dt.TenDoiTac,
+                           dt.DiaChi,
+                           dt.Email,
+                           dt.SoDT,
+                           dt.GhiChu
+                       };
+            return dsdt;
         }
     }
 }

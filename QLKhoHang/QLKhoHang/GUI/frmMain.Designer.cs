@@ -110,6 +110,7 @@
             this.danhSáchKháchHàngToolStripMenuItem.Name = "danhSáchKháchHàngToolStripMenuItem";
             this.danhSáchKháchHàngToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
             this.danhSáchKháchHàngToolStripMenuItem.Text = "Danh  sách khách hàng";
+            this.danhSáchKháchHàngToolStripMenuItem.Click += new System.EventHandler(this.danhSáchKháchHàngToolStripMenuItem_Click);
             // 
             // thêmĐốiTácToolStripMenuItem
             // 
@@ -174,6 +175,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "QUẢN LÝ KHO HÀNG";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
