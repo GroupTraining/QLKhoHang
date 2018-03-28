@@ -54,11 +54,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\frmDsHangtonkho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDsHangtonkho.Designer.cs">
+      <DependentUpon>frmDsHangtonkho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDsHdnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDsHdnhap.Designer.cs">
+      <DependentUpon>frmDsHdnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDsHdxuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDsHdxuat.Designer.cs">
+      <DependentUpon>frmDsHdxuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\frmDsKh.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\frmDsKh.Designer.cs">
       <DependentUpon>frmDsKh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmDsNhacc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmDsNhacc.Designer.cs">
+      <DependentUpon>frmDsNhacc.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\frmDsSanPham.cs">
       <SubType>Form</SubType>
@@ -72,16 +96,136 @@
     <Compile Include="GUI\frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\frmQLhoadonnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQLhoadonnhap.Designer.cs">
+      <DependentUpon>frmQLhoadonnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQLhoadonxuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQLhoadonxuat.Designer.cs">
+      <DependentUpon>frmQLhoadonxuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQLkh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQLkh.Designer.cs">
+      <DependentUpon>frmQLkh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQLloaisp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQLloaisp.Designer.cs">
+      <DependentUpon>frmQLloaisp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQLnhacc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQLnhacc.Designer.cs">
+      <DependentUpon>frmQLnhacc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmQLsp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmQLsp.Designer.cs">
+      <DependentUpon>frmQLsp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThemhoadonnhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThemhoadonnhap.Designer.cs">
+      <DependentUpon>frmThemhoadonnhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThemhoadonxuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThemhoadonxuat.Designer.cs">
+      <DependentUpon>frmThemhoadonxuat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThemkh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThemkh.Designer.cs">
+      <DependentUpon>frmThemkh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThemloaisp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThemloaisp.Designer.cs">
+      <DependentUpon>frmThemloaisp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThemnhacc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThemnhacc.Designer.cs">
+      <DependentUpon>frmThemnhacc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmThemsp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmThemsp.Designer.cs">
+      <DependentUpon>frmThemsp.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmDsHangtonkho.resx">
+      <DependentUpon>frmDsHangtonkho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDsHdnhap.resx">
+      <DependentUpon>frmDsHdnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDsHdxuat.resx">
+      <DependentUpon>frmDsHdxuat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDsKh.resx">
       <DependentUpon>frmDsKh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmDsNhacc.resx">
+      <DependentUpon>frmDsNhacc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmDsSanPham.resx">
       <DependentUpon>frmDsSanPham.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQLhoadonnhap.resx">
+      <DependentUpon>frmQLhoadonnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQLhoadonxuat.resx">
+      <DependentUpon>frmQLhoadonxuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQLkh.resx">
+      <DependentUpon>frmQLkh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQLloaisp.resx">
+      <DependentUpon>frmQLloaisp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQLnhacc.resx">
+      <DependentUpon>frmQLnhacc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmQLsp.resx">
+      <DependentUpon>frmQLsp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThemhoadonnhap.resx">
+      <DependentUpon>frmThemhoadonnhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThemhoadonxuat.resx">
+      <DependentUpon>frmThemhoadonxuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThemkh.resx">
+      <DependentUpon>frmThemkh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThemloaisp.resx">
+      <DependentUpon>frmThemloaisp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThemnhacc.resx">
+      <DependentUpon>frmThemnhacc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmThemsp.resx">
+      <DependentUpon>frmThemsp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

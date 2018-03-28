@@ -35,5 +35,23 @@ namespace BUS
                        };
             return dsdt;
         }
+        public object get_DsHD(string loaihoadon)
+        {
+            var dshd = from x in data.HoaDons
+                       from y in data.HoaDonChiTiets
+                       where x.MaHD == y .MaHD && x.KieuHoaDon == loaihoadon
+                       select new
+                       {
+                           MaHD = x.MaHD,
+                           MaDoiTac = x.MaDoiTac,
+                           MaHDChiTiet = y.MaHDChiTiet,
+                           Ngay = x.Ngay,
+                           MaSP = y.MaSP,
+                           SoLuong = y.SoLuong,
+                           Gia = y.Gia,
+                           MaNV = x.MaNV
+                       };
+            return dshd;
+        }
     }
 }

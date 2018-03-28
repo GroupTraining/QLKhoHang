@@ -71,5 +71,23 @@ namespace QLKhoHang
             frmDsNhacc Nhacc = new frmDsNhacc();
             Nhacc.Show();
         }
+
+        private void danhSáchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDsHdnhap Dsnhap = new frmDsHdnhap();
+            Dsnhap.Show();
+        }
+
+        private void danhSáchHóaĐơnXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDsHdxuat Dsxuat = new frmDsHdxuat();
+            Dsxuat.Show();
+        }
+
+        private void danhSáchHàngTồnKhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDsHangtonkho DsHangtonkho = new frmDsHangtonkho();
+            DsHangtonkho.Show();
+        }
     }
 }
