@@ -44,26 +44,24 @@ namespace QLKhoHang
 
         private void thêmKháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmQLkh kh = new frmQLkh();
-            kh.Show();
+            GUI.ThemDoiTac dt = new GUI.ThemDoiTac();
+            dt.Show();
         }
 
         private void thêmĐốiTácToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmQLnhacc nhacc = new frmQLnhacc();
-            nhacc.Show();
+            GUI.ThemDoiTac dt = new GUI.ThemDoiTac();
+            dt.Show();
         }
 
         private void thêmHóaĐơnNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmQLhoadonnhap hdnhap = new frmQLhoadonnhap();
-            hdnhap.Show();
+
         }
 
         private void thêmHóaĐơnXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmQLhoadonxuat hdxuat = new frmQLhoadonxuat();
-            hdxuat.Show();
+
         }
 
         private void danhSáchNhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
