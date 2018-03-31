@@ -91,5 +91,30 @@ namespace BUS
             data.SubmitChanges();
             return 1;
         }
+        //lay du lieu loai sp
+        public object get_LoaiSP()
+        {
+            var lsp = from p in data.LoaiSanPhams
+                      select new
+                      {
+                          p.MaLoaiSP,
+                          p.TenLoaiSP,
+                          p.MoTa
+                      };
+            return lsp;
+        }
+
+        //them loai san pham
+        public object Add_LoaiSP(string maloaisp,string tenloaisp,string mota)
+        {
+            LoaiSanPham lsp = new LoaiSanPham();
+            lsp.MaLoaiSP = maloaisp;
+            lsp.TenLoaiSP = tenloaisp;
+            lsp.MoTa = mota;
+            data.LoaiSanPhams.InsertOnSubmit(lsp);
+            data.SubmitChanges();
+            return 1;
+        }
+
     }
 }
