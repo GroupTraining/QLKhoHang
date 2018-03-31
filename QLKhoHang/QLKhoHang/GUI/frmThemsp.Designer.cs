@@ -161,6 +161,7 @@
             this.btnTHÊM.TabIndex = 14;
             this.btnTHÊM.Text = "THÊM";
             this.btnTHÊM.UseVisualStyleBackColor = true;
+            this.btnTHÊM.Click += new System.EventHandler(this.btnTHÊM_Click);
             // 
             // dgvThemSP
             // 
@@ -201,6 +202,7 @@
             this.Name = "frmThemsp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Thêm mới sản phẩm";
+            this.Load += new System.EventHandler(this.frmThemsp_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvThemSP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
