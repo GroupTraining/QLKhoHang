@@ -53,5 +53,27 @@ namespace BUS
                        };
             return dshd;
         }
+        //Them đối tác
+        public int add_company(string id, string name, string address,string phone,string email, string message, string group )
+        {
+            int sl = (from count in data.DoiTacs
+                      where count.MaDoiTac == id
+                      select count).Count();
+            if(sl == 0)
+            {
+                DoiTac new_com = new DoiTac();
+                new_com.MaDoiTac = id;
+                new_com.TenDoiTac = name;
+                new_com.DiaChi = address;
+                new_com.SoDT = phone;
+                new_com.Email = email;
+                new_com.GhiChu = message;
+                new_com.KieuDoiTac = group;
+                data.DoiTacs.InsertOnSubmit(new_com);
+                data.SubmitChanges();
+                return 1;
+            }else
+            return 0;
+        }
     }
 }
