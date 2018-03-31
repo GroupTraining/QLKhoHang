@@ -75,5 +75,21 @@ namespace BUS
             }else
             return 0;
         }
+
+        //theem sản phẩm 
+        public object Add_SanPham(string masp,string tensp,string maloaisp,string soluong,string gia,string ghichu,string ngay)
+        {
+            SanPham sp = new SanPham();
+            sp.MaSP = masp;
+            sp.TenSP = tensp;
+            sp.MaLoaiSP = maloaisp;
+            sp.SoLuong = Convert.ToInt32(soluong);
+            sp.Gia = Convert.ToInt32(gia);
+            sp.GhiChu = ghichu;
+            sp.Ngay = Convert.ToDateTime(ngay);
+            data.SanPhams.InsertOnSubmit(sp);
+            data.SubmitChanges();
+            return 1;
+        }
     }
 }
