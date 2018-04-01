@@ -45,5 +45,20 @@ namespace QLKhoHang.GUI
                 MessageBox.Show("Nhập Sai Dữ Liệu. Nhập Lại!");
             }
         }
+
+        private void frmThemloaisp_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
