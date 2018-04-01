@@ -56,12 +56,14 @@ namespace QLKhoHang
 
         private void thêmHóaĐơnNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            GUI.ThemHoaDon hd = new GUI.ThemHoaDon();
+            hd.Show();
         }
 
         private void thêmHóaĐơnXuấtToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            GUI.ThemHoaDon hd = new GUI.ThemHoaDon();
+            hd.Show();
         }
 
         private void danhSáchNhàCungCấpToolStripMenuItem_Click(object sender, EventArgs e)
