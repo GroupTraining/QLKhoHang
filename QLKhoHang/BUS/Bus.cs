@@ -91,5 +91,66 @@ namespace BUS
             data.SubmitChanges();
             return 1;
         }
+        //thêm hóa đơn
+        public int Add_HoaDon(string mahd,string madt,DateTime ngaylap,string manv)
+        {
+            int sl_dt = (from count in data.DoiTacs
+                      where count.MaDoiTac == madt
+                      select count).Count();
+            int sl_hd = (from count in data.HoaDons
+                      where count.MaHD == mahd
+                      select count).Count();
+            int sl_nv = (from count in data.NhanViens
+                      where count.MaNV == manv
+                      select count).Count();
+            var doitac = data.DoiTacs.Single(p => p.MaDoiTac == madt);
+            if (sl_dt >0 && sl_hd ==0 && sl_nv >0)
+            {
+                HoaDon hd = new HoaDon();
+                hd.MaHD = mahd;
+                hd.MaDoiTac = madt;
+                hd.Ngay = ngaylap;
+                hd.MaNV = manv;
+                if(doitac.KieuDoiTac == "Khách hàng")
+                {
+                    hd.KieuHoaDon = "Xuất ra";
+                }else
+                {
+                    hd.KieuHoaDon = "Nhập vào";
+                }
+                data.HoaDons.InsertOnSubmit(hd);
+                data.SubmitChanges();
+                return 1;
+            }
+            else
+            {
+                return 0;
+            }       
+        }
+        //Thêm mới hóa đơn chi tiết
+        public int Add_HDCT(string mahdct, string mahd, string masp, int sl, int gia)
+        {
+            int sl_hd = (from count in data.HoaDons
+                         where count.MaHD == mahd
+                         select count).Count();
+            int sl_hdct = (from count in data.HoaDonChiTiets
+                           where count.MaHDChiTiet == mahdct
+                           select count).Count();
+            var sp = data.SanPhams.Single(p => p.MaSP == masp);
+            if (sl_hd > 0 && sl_hdct == 0 && sp != null)
+            {
+                HoaDonChiTiet hdct = new HoaDonChiTiet();
+                hdct.MaHDChiTiet = mahdct;
+                hdct.MaHD = mahd;
+                hdct.MaSP = masp;
+                hdct.SoLuong = sl;
+                hdct.Gia = gia;
+                data.HoaDonChiTiets.InsertOnSubmit(hdct);
+                data.SubmitChanges();
+                return 1;
+            }
+            else
+                return 0;
+        }
     }
 }
