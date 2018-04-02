@@ -17,8 +17,15 @@ namespace QLKhoHang.GUI
         public frmDsSanPham()
         {
             InitializeComponent();
+            dataGridView1.DataSource = bus.get_sanpham("Thông tin sản phẩm");
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+        }
 
-            dataGridView1.DataSource = bus.get_DsSP();
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bus.get_sanpham(txtGiatri.Text);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }
     }
 }

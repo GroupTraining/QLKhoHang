@@ -19,7 +19,15 @@ namespace QLKhoHang.GUI
         {
             InitializeComponent();
 
-            dataGridView1.DataSource = bus.get_DsDT("Khách hàng");
+            dataGridView1.DataSource = bus.get_doitac("Khách hàng");
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bus.get_doitac(txtGiatri.Text);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
         }
     }
 }

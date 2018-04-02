@@ -176,5 +176,81 @@ namespace BUS
             lsp.MoTa = mota;
             return 1;
         }
+
+        //tim kiem san pham
+        public object get_sanpham(string giatri)
+        {
+            var sp = from a in data.SanPhams
+                     from b in data.LoaiSanPhams
+                     where a.MaLoaiSP == b.MaLoaiSP
+                     select new
+                     {
+                         MaSP = a.MaSP,
+                         TenSP = a.TenSP,
+                         MaLoaiSP = a.MaLoaiSP,
+                         SoLuong = a.SoLuong,
+                         Gia = a.Gia,
+                         GhiChu = a.GhiChu,
+                         Ngay = a.Ngay,
+
+                     } into timkiemsanpham
+                     where timkiemsanpham.MaSP.Contains(giatri)
+                     || timkiemsanpham.TenSP.Contains(giatri)
+                     || timkiemsanpham.MaLoaiSP.Contains(giatri)
+                    
+                     select timkiemsanpham;
+            return sp;
+
+        }
+        //tim kiem doi tac
+        public object get_doitac(string giatri)
+        {
+            var cc = from a in data.DoiTacs
+                     from b in data.HoaDons
+                     where a.MaDoiTac == b.MaDoiTac
+                     select new
+                     {
+                         MaDoiTac = a.MaDoiTac,
+                         TenDoiTac = a.TenDoiTac,
+                         DiaChi = a.DiaChi,
+                         SDT = a.SoDT,
+                         Email = a.Email,
+                         GhiChu = a.GhiChu,
+                     } into timkiemdoitac
+                     where timkiemdoitac.MaDoiTac.Contains(giatri)
+                     || timkiemdoitac.TenDoiTac.Contains(giatri)
+                     || timkiemdoitac.DiaChi.Contains(giatri)
+                     || timkiemdoitac.SDT.Contains(giatri)
+                     || timkiemdoitac.Email.Contains(giatri)
+                     || timkiemdoitac.GhiChu.Contains(giatri)
+                     select timkiemdoitac;
+            return cc;
+
+        }
+        //tim kiem hoa don
+        public object get_hoadon(string giatri)
+        {
+            var hd = from a in data.HoaDons
+                     from b in data.HoaDonChiTiets
+                     where a.MaHD == b.MaHD
+                     select new
+                     {
+                         MaHD = a.MaHD,
+                         MaDoiTac = a.MaDoiTac,
+                         MaHDChiTiet = b.MaHDChiTiet,
+                         Ngay = a.Ngay,
+                         MaSP = b.MaSP,
+                         SoLuong = b.SoLuong,
+                         Gia = b.Gia,
+                         MaNV = a.MaNV,
+                     } into timkiemhoadon
+                     where timkiemhoadon.MaHD.Contains(giatri)
+                     || timkiemhoadon.MaDoiTac.Contains(giatri)
+                     || timkiemhoadon.MaHDChiTiet.Contains(giatri)
+                     || timkiemhoadon.MaSP.Contains(giatri)
+                     || timkiemhoadon.MaNV.Contains(giatri)
+                     select timkiemhoadon;
+            return hd;
+        }
     }
 }
