@@ -53,6 +53,24 @@ namespace BUS
                        };
             return dshd;
         }
+        public object getDataHD()
+        {
+            var hd = from a in data.HoaDons
+                     from b in data.HoaDonChiTiets
+                     from c in data.DoiTacs
+                     where a.MaDoiTac == c.MaDoiTac
+                     where a.MaHD == b.MaHD
+                     select new
+                     {
+                         MaHD      = a.MaHD,
+                         TenDoiTac = c.TenDoiTac,
+                         Ngay      = a.Ngay,
+                         KieuHoaDon =a.KieuHoaDon,
+                         SoLuong    = b.SoLuong,
+                         Gia        = b.Gia 
+                     };
+            return hd;
+        }
         //Them đối tác
         public int add_company(string id, string name, string address,string phone,string email, string message, string group )
         {
