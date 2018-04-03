@@ -17,7 +17,7 @@ namespace QLKhoHang.GUI
         public frmDsSanPham()
         {
             InitializeComponent();
-            dataGridView1.DataSource = bus.get_DsSP("Thông tin sản phẩm");
+            dataGridView1.DataSource = bus.get_DsSP();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 

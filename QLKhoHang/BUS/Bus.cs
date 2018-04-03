@@ -272,6 +272,8 @@ namespace BUS
             lsp.MaLoaiSP = maloaisp;
             lsp.TenLoaiSP = tenloaisp;
             lsp.MoTa = mota;
+            data.LoaiSanPhams.InsertOnSubmit(lsp);
+            data.SubmitChanges();
             return 1;
         }
         //Sửa xóa hóa đơn
@@ -315,10 +317,19 @@ namespace BUS
         public int delSP(string masp)
         {
             var SP = data.SanPhams.Single(p => p.MaSP == masp);
-            var HDCT = data.HoaDonChiTiets.Single(p => p.MaSP == masp);
-            data.SanPhams.DeleteOnSubmit(SP);
-            data.HoaDonChiTiets.DeleteOnSubmit(HDCT);
-            data.SubmitChanges();
+            int x = (from n in data.HoaDonChiTiets where n.MaSP == masp select n).Count();
+            if (x != 0)
+            {
+                var HDCT = data.HoaDonChiTiets.Single(p => p.MaSP == masp);
+                data.SanPhams.DeleteOnSubmit(SP);
+                data.HoaDonChiTiets.DeleteOnSubmit(HDCT);
+                data.SubmitChanges();
+            }
+            else
+            {
+                data.SanPhams.DeleteOnSubmit(SP);
+                data.SubmitChanges();
+            }
             return 1;
         }
     }

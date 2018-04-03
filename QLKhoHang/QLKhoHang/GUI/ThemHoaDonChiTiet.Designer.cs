@@ -121,7 +121,7 @@
             this.txt_sl.Name = "txt_sl";
             this.txt_sl.Size = new System.Drawing.Size(154, 26);
             this.txt_sl.TabIndex = 1;
-            this.txt_sl.Enter += new System.EventHandler(this.txt_sl_Enter);
+            this.txt_sl.TextChanged += new System.EventHandler(this.txt_sl_TextChanged);
             // 
             // txt_masp
             // 

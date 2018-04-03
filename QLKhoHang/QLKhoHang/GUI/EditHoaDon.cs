@@ -69,8 +69,20 @@ namespace QLKhoHang.GUI
 
         private void buttonX1_Click(object sender, EventArgs e)
         {
-            ThemHoaDon hd = new ThemHoaDon();
-            hd.Show();
+            ThemHoaDon hd = null;
+            Check_Them:
+            if (hd == null || hd.IsDisposed)
+            {
+                hd = new ThemHoaDon();
+            }
+            if (hd.ShowDialog() == DialogResult.OK)
+            {
+                if (ThemHoaDon.x == 0)
+                {
+                    goto Check_Them;
+                }
+            }
+            dataGridViewX1.DataSource = data.getDataHD();
         }
     }
 }

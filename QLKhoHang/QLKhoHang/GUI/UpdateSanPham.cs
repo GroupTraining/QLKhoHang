@@ -63,11 +63,5 @@ namespace QLKhoHang.GUI
             dateNgay.Text = dataGridViewSP.Rows[rowindex].Cells[3].Value.ToString();
             textGhichu.Text = dataGridViewSP.Rows[rowindex].Cells[6].Value.ToString();
         }
-
-        private void buttonX1_Click(object sender, EventArgs e)
-        {
-            frmThemsp themsp = new frmThemsp();
-            themsp.Show();
-        }
     }
 }

@@ -56,7 +56,6 @@
             this.lbTenLoaiSP.Size = new System.Drawing.Size(115, 13);
             this.lbTenLoaiSP.TabIndex = 1;
             this.lbTenLoaiSP.Text = "TÊN LOẠI SẢN PHẨM";
-            this.lbTenLoaiSP.Click += new System.EventHandler(this.label2_Click);
             // 
             // lbMoTa
             // 
@@ -96,6 +95,7 @@
             this.btnTHÊM.TabIndex = 6;
             this.btnTHÊM.Text = "THÊM";
             this.btnTHÊM.UseVisualStyleBackColor = true;
+            this.btnTHÊM.Click += new System.EventHandler(this.btnTHÊM_Click_1);
             // 
             // dgvLoaiSanPham
             // 
@@ -104,7 +104,6 @@
             this.dgvLoaiSanPham.Name = "dgvLoaiSanPham";
             this.dgvLoaiSanPham.Size = new System.Drawing.Size(410, 175);
             this.dgvLoaiSanPham.TabIndex = 7;
-            this.dgvLoaiSanPham.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // frmThemloaisp
             // 
@@ -121,7 +120,7 @@
             this.Controls.Add(this.lbMaLoaiSP);
             this.Name = "frmThemloaisp";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmThemmoiloaisp";
+            this.Text = "Thêm mới loại sản phẩm";
             this.Load += new System.EventHandler(this.frmThemloaisp_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLoaiSanPham)).EndInit();
             this.ResumeLayout(false);
