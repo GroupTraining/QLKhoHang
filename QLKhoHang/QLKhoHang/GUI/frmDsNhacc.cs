@@ -18,13 +18,13 @@ namespace QLKhoHang.GUI
         {
             InitializeComponent();
 
-            dataGridView1.DataSource = bus.get_doitac("Nhà cung cấp");
+            dataGridView1.DataSource = bus.get_DsDT("Nhà cung cấp");
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = bus.get_doitac(txtGiatri.Text);
+            dataGridView1.DataSource = bus.get_DsDT("Nhà cung cấp",txtGiatri.Text);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 

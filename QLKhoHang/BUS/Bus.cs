@@ -27,6 +27,30 @@ namespace BUS
                        };
             return dssp;
         }
+        public object get_DsSP(string giatri)
+        {
+            var dssp = from sp in data.SanPhams
+                       select new
+                       {
+                           sp.MaSP,
+                           sp.TenSP,
+                           sp.MaLoaiSP,
+                           sp.Ngay,
+                           sp.SoLuong,
+                           sp.Gia,
+                           sp.GhiChu
+                       } into t
+                       where t.MaSP.Contains(giatri)
+                || t.TenSP.Contains(giatri)
+                || t.MaLoaiSP.Contains(giatri)
+                || t.Ngay.ToString().Contains(giatri)
+                || t.SoLuong.ToString().Contains(giatri)
+                || t.Gia.ToString().Contains(giatri)
+                || t.GhiChu.Contains(giatri)
+                       select t;
+
+            return dssp;
+        }
         public object get_DsDT(string loaidoitac)
         {
             var dsdt = from dt in data.DoiTacs
@@ -40,6 +64,30 @@ namespace BUS
                            dt.SoDT,
                            dt.GhiChu
                        };
+            return dsdt;
+        }
+        public object get_DsDT(string loaidoitac, string giatri)
+        {
+            var dsdt = from dt in data.DoiTacs
+                       where dt.KieuDoiTac == loaidoitac
+                       select new
+                       {
+                           dt.MaDoiTac,
+                           dt.TenDoiTac,
+                           dt.DiaChi,
+                           dt.Email,
+                           dt.SoDT,
+                           dt.GhiChu
+                       } into t
+                       where t.MaDoiTac.Contains(giatri)
+                       || t.TenDoiTac.Contains(giatri)
+                       || t.DiaChi.Contains(giatri)
+                       || t.Email.Contains(giatri)
+                       || t.SoDT.Contains(giatri)
+                       || t.GhiChu.Contains(giatri)
+
+                       select t;
+
             return dsdt;
         }
         public object get_DsHD(string loaihoadon)
@@ -58,6 +106,34 @@ namespace BUS
                            Gia = y.Gia,
                            MaNV = x.MaNV
                        };
+            return dshd;
+        }
+        public object get_DsHD(string loaihoadon,string giatri)
+        {
+            var dshd = from x in data.HoaDons
+                       from y in data.HoaDonChiTiets
+                       where x.MaHD == y.MaHD && x.KieuHoaDon == loaihoadon
+                       select new
+                       {
+                           MaHD = x.MaHD,
+                           MaDoiTac = x.MaDoiTac,
+                           MaHDChiTiet = y.MaHDChiTiet,
+                           Ngay = x.Ngay,
+                           MaSP = y.MaSP,
+                           SoLuong = y.SoLuong,
+                           Gia = y.Gia,
+                           MaNV = x.MaNV
+                       } into t
+                       where t.MaHD.Contains(giatri)
+                       || t.MaDoiTac.Contains(giatri)
+                       || t.MaHDChiTiet.Contains(giatri)
+                       || t.Ngay.ToString().Contains(giatri)
+                       || t.MaSP.ToString().Contains(giatri)
+                       || t.SoLuong.ToString().Contains(giatri)
+                       || t.Gia.ToString().Contains(giatri)
+                       || t.MaNV.Contains(giatri)
+                       select t;
+
             return dshd;
         }
         public object getDataHD()
