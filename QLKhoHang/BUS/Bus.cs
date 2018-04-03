@@ -16,7 +16,13 @@ namespace BUS
             var dssp = from sp in data.SanPhams
                        select new
                        {
-                           sp.MaSP,sp.TenSP, sp.MaLoaiSP, sp.SoLuong, sp.Gia, sp.GhiChu, sp.Ngay
+                           sp.MaSP,
+                           sp.TenSP,
+                           sp.MaLoaiSP,
+                           sp.Ngay,
+                           sp.SoLuong,
+                           sp.Gia,
+                           sp.GhiChu
                        };
             return dssp;
         }
@@ -270,5 +276,32 @@ namespace BUS
                      select timkiemhoadon;
             return hd;
         }
+
+
+        public int UpdateSP(string masp, string tensp, string soluong, string gia, string ngay, string ghichu)
+        {
+            var SP = data.SanPhams.Single(p => p.MaSP == masp);
+            SP.MaSP = masp;
+            SP.TenSP = tensp;
+            SP.SoLuong = Convert.ToInt32(soluong);
+            SP.Gia = Convert.ToInt32(gia);
+            SP.Ngay = Convert.ToDateTime(ngay);
+            SP.GhiChu = ghichu;
+
+            data.SubmitChanges();
+
+            return 1;
+        }
+        public int delSP(string masp)
+        {
+            var SP = data.SanPhams.Single(p => p.MaSP == masp);
+            var HDCT = data.HoaDonChiTiets.Single(p => p.MaSP == masp);
+            data.SanPhams.DeleteOnSubmit(SP);
+            data.HoaDonChiTiets.DeleteOnSubmit(HDCT);
+            data.SubmitChanges();
+            return 1;
+        }
     }
+
+
 }
