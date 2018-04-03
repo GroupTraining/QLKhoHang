@@ -28,39 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewX1 = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.comboBoxHD = new DevComponents.DotNetBar.Controls.ComboBoxEx();
-            this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.txtSoLuong = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.btnCapNhat = new DevComponents.DotNetBar.ButtonX();
             this.btnXoa = new DevComponents.DotNetBar.ButtonX();
+            this.labelX4 = new DevComponents.DotNetBar.LabelX();
+            this.txtMaHD = new DevComponents.DotNetBar.Controls.TextBoxX();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewX1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewX1
             // 
             this.dataGridViewX1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewX1.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewX1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewX1.Location = new System.Drawing.Point(2, 98);
             this.dataGridViewX1.Name = "dataGridViewX1";
-            this.dataGridViewX1.Size = new System.Drawing.Size(635, 163);
+            this.dataGridViewX1.Size = new System.Drawing.Size(646, 163);
             this.dataGridViewX1.TabIndex = 0;
+            this.dataGridViewX1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewX1_CellClick);
             // 
             // labelX1
             // 
-            this.labelX1.Location = new System.Drawing.Point(-7, 19);
+            this.labelX1.Location = new System.Drawing.Point(113, 19);
             this.labelX1.Name = "labelX1";
             this.labelX1.Size = new System.Drawing.Size(75, 20);
             this.labelX1.TabIndex = 1;
@@ -69,7 +72,7 @@
             // 
             // labelX2
             // 
-            this.labelX2.Location = new System.Drawing.Point(210, 19);
+            this.labelX2.Location = new System.Drawing.Point(303, 17);
             this.labelX2.Name = "labelX2";
             this.labelX2.Size = new System.Drawing.Size(75, 23);
             this.labelX2.TabIndex = 2;
@@ -77,20 +80,20 @@
             // 
             // labelX3
             // 
-            this.labelX3.Location = new System.Drawing.Point(435, 19);
+            this.labelX3.Location = new System.Drawing.Point(510, 17);
             this.labelX3.Name = "labelX3";
             this.labelX3.Size = new System.Drawing.Size(75, 23);
             this.labelX3.TabIndex = 3;
             this.labelX3.Text = "Số Lượng";
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            this.dateTimePicker1.CustomFormat = "dd/MM/yyyy";
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(62, 19);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(130, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker.Location = new System.Drawing.Point(179, 19);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(100, 20);
+            this.dateTimePicker.TabIndex = 4;
             // 
             // comboBoxHD
             // 
@@ -98,21 +101,21 @@
             this.comboBoxHD.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboBoxHD.FormattingEnabled = true;
             this.comboBoxHD.ItemHeight = 14;
-            this.comboBoxHD.Location = new System.Drawing.Point(291, 19);
+            this.comboBoxHD.Location = new System.Drawing.Point(384, 19);
             this.comboBoxHD.Name = "comboBoxHD";
-            this.comboBoxHD.Size = new System.Drawing.Size(121, 20);
+            this.comboBoxHD.Size = new System.Drawing.Size(108, 20);
             this.comboBoxHD.TabIndex = 5;
             // 
-            // textBoxX1
+            // txtSoLuong
             // 
             // 
             // 
             // 
-            this.textBoxX1.Border.Class = "TextBoxBorder";
-            this.textBoxX1.Location = new System.Drawing.Point(507, 19);
-            this.textBoxX1.Name = "textBoxX1";
-            this.textBoxX1.Size = new System.Drawing.Size(100, 20);
-            this.textBoxX1.TabIndex = 6;
+            this.txtSoLuong.Border.Class = "TextBoxBorder";
+            this.txtSoLuong.Location = new System.Drawing.Point(561, 19);
+            this.txtSoLuong.Name = "txtSoLuong";
+            this.txtSoLuong.Size = new System.Drawing.Size(73, 20);
+            this.txtSoLuong.TabIndex = 6;
             // 
             // btnCapNhat
             // 
@@ -136,16 +139,38 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
+            // labelX4
+            // 
+            this.labelX4.Location = new System.Drawing.Point(12, 19);
+            this.labelX4.Name = "labelX4";
+            this.labelX4.Size = new System.Drawing.Size(75, 23);
+            this.labelX4.TabIndex = 9;
+            this.labelX4.Text = "MaHD";
+            // 
+            // txtMaHD
+            // 
+            // 
+            // 
+            // 
+            this.txtMaHD.Border.Class = "TextBoxBorder";
+            this.txtMaHD.Enabled = false;
+            this.txtMaHD.Location = new System.Drawing.Point(56, 19);
+            this.txtMaHD.Name = "txtMaHD";
+            this.txtMaHD.Size = new System.Drawing.Size(67, 20);
+            this.txtMaHD.TabIndex = 10;
+            // 
             // EditHoaDon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 261);
+            this.ClientSize = new System.Drawing.Size(651, 261);
+            this.Controls.Add(this.txtMaHD);
+            this.Controls.Add(this.labelX4);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnCapNhat);
-            this.Controls.Add(this.textBoxX1);
+            this.Controls.Add(this.txtSoLuong);
             this.Controls.Add(this.comboBoxHD);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.labelX3);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.labelX1);
@@ -164,10 +189,12 @@
         private DevComponents.DotNetBar.LabelX labelX1;
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX labelX3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private DevComponents.DotNetBar.Controls.ComboBoxEx comboBoxHD;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtSoLuong;
         private DevComponents.DotNetBar.ButtonX btnCapNhat;
         private DevComponents.DotNetBar.ButtonX btnXoa;
+        private DevComponents.DotNetBar.LabelX labelX4;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtMaHD;
     }
 }
