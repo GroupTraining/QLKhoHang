@@ -32,13 +32,13 @@ namespace QLKhoHang
 
         private void thêmLoạiSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmQLloaisp loaisp = new frmQLloaisp();
+            frmThemloaisp loaisp = new frmThemloaisp();
             loaisp.Show();
         }
 
         private void thêmSảnPhẩmToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmQLsp sp = new frmQLsp();
+            UpdateSanPham sp = new UpdateSanPham();
             sp.Show();
         }
 
@@ -48,21 +48,9 @@ namespace QLKhoHang
             dt.Show();
         }
 
-        private void thêmĐốiTácToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GUI.ThemDoiTac dt = new GUI.ThemDoiTac();
-            dt.Show();
-        }
-
         private void thêmHóaĐơnNhậpToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GUI.ThemHoaDon hd = new GUI.ThemHoaDon();
-            hd.Show();
-        }
-
-        private void thêmHóaĐơnXuấtToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            GUI.ThemHoaDon hd = new GUI.ThemHoaDon();
+            GUI.EditHoaDon hd = new GUI.EditHoaDon();
             hd.Show();
         }
 
@@ -82,12 +70,6 @@ namespace QLKhoHang
         {
             frmDsHdxuat Dsxuat = new frmDsHdxuat();
             Dsxuat.Show();
-        }
-
-        private void danhSáchHàngTồnKhoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmDsHangtonkho DsHangtonkho = new frmDsHangtonkho();
-            DsHangtonkho.Show();
         }
     }
 }
