@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using System.Globalization;
 
 namespace BUS
 {
@@ -276,8 +277,30 @@ namespace BUS
                      select timkiemhoadon;
             return hd;
         }
+        //Sửa xóa hóa đơn
+        public int UpdateHD(string mahd, string ngay,string kieu, string soluong)
+        {
+            var HD = data.HoaDons.Single(a => a.MaHD == mahd);
+            var ChiTiet = data.HoaDonChiTiets.Single(b => b.MaHD == mahd);
+            HD.Ngay = DateTime.ParseExact(ngay, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            HD.KieuHoaDon = kieu;
+            ChiTiet.SoLuong = Convert.ToInt32(soluong);
 
+            data.SubmitChanges();
+            return 1;
+        }
+        public int DelHD(string mahd)
+        {
+            var HD = data.HoaDons.Single(a => a.MaHD == mahd);
+            var ChiTiet = data.HoaDonChiTiets.Single(b => b.MaHD == mahd);
 
+            data.HoaDons.DeleteOnSubmit(HD);
+            data.HoaDonChiTiets.DeleteOnSubmit(ChiTiet);
+            data.SubmitChanges();
+            
+            return 1;
+        }
+        //Sửa xóa sản phẩm
         public int UpdateSP(string masp, string tensp, string soluong, string gia, string ngay, string ghichu)
         {
             var SP = data.SanPhams.Single(p => p.MaSP == masp);
