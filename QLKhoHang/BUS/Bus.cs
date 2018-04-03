@@ -280,10 +280,14 @@ namespace BUS
         public int UpdateHD(string mahd, string ngay,string kieu, string soluong)
         {
             var HD = data.HoaDons.Single(a => a.MaHD == mahd);
-            var ChiTiet = data.HoaDonChiTiets.Single(b => b.MaHD == mahd);
-            HD.Ngay = DateTime.ParseExact(ngay, "dd/MM/yyyy", CultureInfo.InvariantCulture);
+            int x = (from n in data.HoaDonChiTiets where n.MaHD == mahd select n).Count();
+            if (x != 0)
+            {
+                var ChiTiet = data.HoaDonChiTiets.Single(b => b.MaHD == mahd);
+                ChiTiet.SoLuong = Convert.ToInt32(soluong);
+            }
             HD.KieuHoaDon = kieu;
-            ChiTiet.SoLuong = Convert.ToInt32(soluong);
+            HD.Ngay = DateTime.ParseExact(ngay, "dd/MM/yyyy", CultureInfo.InvariantCulture);
 
             data.SubmitChanges();
             return 1;

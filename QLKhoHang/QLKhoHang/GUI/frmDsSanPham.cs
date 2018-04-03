@@ -8,22 +8,37 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
+using DAL;
 
 namespace QLKhoHang.GUI
 {
     public partial class frmDsSanPham : Form
     {
+        DataDiagramDataContext dl = new DataDiagramDataContext();
         Bus bus = new Bus();
         public frmDsSanPham()
         {
             InitializeComponent();
             dataGridView1.DataSource = bus.get_DsSP();
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+
+            var query = (from n in dl.LoaiSanPhams select n.MaLoaiSP);
+            foreach (string item in query)
+            {
+                cbLsp.Items.Add(item);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             dataGridView1.DataSource = bus.get_DsSP(txtGiatri.Text);
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+        }
+
+        private void cbLsp_TextChanged(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = bus.get_DsSP(cbLsp.Text);
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
             dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
         }

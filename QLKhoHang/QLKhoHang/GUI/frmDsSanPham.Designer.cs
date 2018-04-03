@@ -108,6 +108,7 @@
             this.cbLsp.Name = "cbLsp";
             this.cbLsp.Size = new System.Drawing.Size(121, 21);
             this.cbLsp.TabIndex = 1;
+            this.cbLsp.TextChanged += new System.EventHandler(this.cbLsp_TextChanged);
             // 
             // label1
             // 
