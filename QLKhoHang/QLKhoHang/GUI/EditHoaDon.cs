@@ -66,5 +66,11 @@ namespace QLKhoHang.GUI
             comboBoxHD.Text = dataGridViewX1.Rows[rowindex].Cells[3].Value.ToString();
             txtSoLuong.Text = dataGridViewX1.Rows[rowindex].Cells[4].Value.ToString();
         }
+
+        private void buttonX1_Click(object sender, EventArgs e)
+        {
+            ThemHoaDon hd = new ThemHoaDon();
+            hd.Show();
+        }
     }
 }
