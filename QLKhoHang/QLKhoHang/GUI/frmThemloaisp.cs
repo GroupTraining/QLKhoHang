@@ -18,24 +18,22 @@ namespace QLKhoHang.GUI
         {
             InitializeComponent();
         }
+        
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void frmThemloaisp_Load(object sender, EventArgs e)
+        private void frmThemloaisp_Load_1(object sender, EventArgs e)
         {
             dgvLoaiSanPham.DataSource = bus.get_LoaiSP();
+            dgvLoaiSanPham.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
         }
 
-        private void btnTHÊM_Click(object sender, EventArgs e)
+        private void btnTHÊM_Click_1(object sender, EventArgs e)
         {
             try
             {
                 bus.Add_LoaiSP(txtMaLoaiSP.Text, txtTenLoaiSP.Text, txtMoTa.Text);
                 dgvLoaiSanPham.Refresh();
                 dgvLoaiSanPham.DataSource = bus.get_LoaiSP();
+                dgvLoaiSanPham.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.DisplayedCells;
                 MessageBox.Show("ĐÃ THÊM THÀNH CÔNG");
 
             }
@@ -44,21 +42,6 @@ namespace QLKhoHang.GUI
                 Console.Write(ex);
                 MessageBox.Show("Nhập Sai Dữ Liệu. Nhập Lại!");
             }
-        }
-
-        private void frmThemloaisp_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }

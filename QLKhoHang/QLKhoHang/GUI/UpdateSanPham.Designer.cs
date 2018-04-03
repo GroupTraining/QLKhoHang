@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
             this.labelX2 = new DevComponents.DotNetBar.LabelX();
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
@@ -44,7 +44,6 @@
             this.dataGridViewSP = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.buttonUpdate = new DevComponents.DotNetBar.ButtonX();
             this.buttonDel = new DevComponents.DotNetBar.ButtonX();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dateNgay)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSP)).BeginInit();
             this.SuspendLayout();
@@ -201,14 +200,14 @@
             // dataGridViewSP
             // 
             this.dataGridViewSP.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridViewSP.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewSP.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewSP.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
             this.dataGridViewSP.Location = new System.Drawing.Point(0, 185);
             this.dataGridViewSP.Name = "dataGridViewSP";
@@ -242,24 +241,11 @@
             this.buttonDel.Text = "Xóa";
             this.buttonDel.Click += new System.EventHandler(this.buttonDel_Click);
             // 
-            // buttonX1
-            // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.buttonX1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.buttonX1.Location = new System.Drawing.Point(269, 150);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(98, 29);
-            this.buttonX1.TabIndex = 15;
-            this.buttonX1.Text = "Thêm";
-            this.buttonX1.Click += new System.EventHandler(this.buttonX1_Click);
-            // 
             // UpdateSanPham
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 351);
-            this.Controls.Add(this.buttonX1);
             this.Controls.Add(this.buttonDel);
             this.Controls.Add(this.buttonUpdate);
             this.Controls.Add(this.dataGridViewSP);
@@ -300,6 +286,5 @@
         private DevComponents.DotNetBar.Controls.DataGridViewX dataGridViewSP;
         private DevComponents.DotNetBar.ButtonX buttonUpdate;
         private DevComponents.DotNetBar.ButtonX buttonDel;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
     }
 }

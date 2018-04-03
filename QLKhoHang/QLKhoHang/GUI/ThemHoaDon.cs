@@ -15,6 +15,7 @@ namespace QLKhoHang.GUI
     public partial class ThemHoaDon : Form
     {
         Bus bus = new Bus();
+        public static int x;
         public ThemHoaDon()
         {
             InitializeComponent();
@@ -33,6 +34,7 @@ namespace QLKhoHang.GUI
             {
                 if (bus.Add_HoaDon(txt_mahd.Text,txt_madoitac.Text,time,txt_manv.Text) == 1)
                 {
+                    x = 1;
                     MessageBox.Show("Thêm thành công !!");
                     txt_mahd.Text = "";
                     txt_madoitac.Text = "";
@@ -40,6 +42,7 @@ namespace QLKhoHang.GUI
                 }
                 else
                 {
+                    x = 0;
                     MessageBox.Show("Thêm không thành công !!");
                 }
             }

@@ -28,9 +28,8 @@ namespace QLKhoHang.GUI
 
         private void btn_submit_Click(object sender, EventArgs e)
         {
-            
 
-            if (MessageBox.Show("Bạn   muốn thêm hóa đơn chi tiết này ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            if (MessageBox.Show("Bạn muốn thêm hóa đơn chi tiết này ?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (bus.Add_HDCT(txt_mahdct.Text,txt_mahd.Text,txt_masp.Text,Convert.ToInt32(txt_sl.Text),Convert.ToInt32(lbl_amount.Text) )== 1)
                 {
@@ -53,10 +52,17 @@ namespace QLKhoHang.GUI
             this.Hide();
         }
 
-        private void txt_sl_Enter(object sender, EventArgs e)
+        private void txt_sl_TextChanged(object sender, EventArgs e)
         {
-            var sp = data.SanPhams.Single(p => p.MaSP == txt_masp.Text);
-            lbl_amount.Text = Convert.ToString(sp.Gia * Convert.ToInt32(txt_sl.Text));
+            if (txt_masp.Text != "")
+            {
+                var sp = data.SanPhams.Single(p => p.MaSP == txt_masp.Text);
+                lbl_amount.Text = Convert.ToString(sp.Gia * Convert.ToInt32(txt_sl.Text));
+            }
+            else
+            {
+                lbl_amount.Text = "";
+            }
         }
     }
 }
